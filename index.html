@@ -15,14 +15,24 @@
   <nav class="navbar">
     <div class="container nav-container">
       <a href="#" class="logo-link">
-        <!-- Reemplaza "logo.png" por el nombre exacto de tu archivo de logo -->
         <img src="logo.png" alt="Piso Media Logo" class="brand-logo">
       </a>
-      <ul class="nav-links">
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#metodologia">Metodología</a></li>
-        <li><a href="https://wa.me/+56952384320" class="btn-nav">Hablemos</a></li>
+
+      <!-- Menú Desplegable (Solo Servicios y Metodología) -->
+      <ul class="nav-links" id="navMenu">
+        <li><a href="#servicios" class="nav-item">Servicios</a></li>
+        <li><a href="#metodologia" class="nav-item">Metodología</a></li>
       </ul>
+
+      <!-- Acciones de Navegación (Botón fuera + Hamburguesa) -->
+      <div class="nav-actions">
+        <a href="#contacto" class="btn-nav">Agendar Cita</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -33,7 +43,7 @@
       <h1>Convertimos visitas en clientes a través de contenido estratégico</h1>
       <p>Diseñamos campañas de alto impacto, gestionamos tus redes y ejecutamos estrategias orientadas exclusivamente a aumentar la facturación de tu negocio.</p>
       <div class="hero-btns">
-        <a href="https://wa.me/+56952384320" class="btn-primary">Aumentar mis ventas hoy</a>
+        <a href="#contacto" class="btn-primary">Aumentar mis ventas hoy</a>
         <a href="#servicios" class="btn-secondary">Explorar servicios</a>
       </div>
     </div>
@@ -44,7 +54,6 @@
     <div class="container">
       <h2 class="section-title">Soluciones diseñadas para escalar</h2>
       <div class="grid-services">
-        
         <div class="card">
           <div class="icon">🎬</div>
           <h3>Creación de Contenido</h3>
@@ -62,12 +71,11 @@
           <h3>Estrategia de Ventas</h3>
           <p>Embudos de conversión y hojas de ruta claras para transformar seguidores en compradores recurrentes de tus productos o servicios.</p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- Sección Metodología / Beneficios -->
+  <!-- Sección Metodología -->
   <section id="metodologia" class="features">
     <div class="container">
       <h2 class="section-title">¿Por qué trabajar con nosotros?</h2>
@@ -88,7 +96,7 @@
     </div>
   </section>
 
-  <!-- Call to Action / Contacto -->
+  <!-- CTA / Contacto -->
   <section id="contacto" class="cta">
     <div class="container cta-content">
       <h2>Listos para multiplicar el alcance de tu marca</h2>
@@ -102,12 +110,12 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="container footer-content">
       <p>&copy; 2026 Piso Media. Todos los derechos reservados.</p>
     </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
