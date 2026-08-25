@@ -1,7 +1,8 @@
 /* Variables y Estilos Base */
 :root {
-  --primary: #4F46E5;
-  --primary-hover: #4338CA;
+  --primary: #0F172A; /* Color negro/oscuro elegante a tono con el logo */
+  --primary-btn: #2563EB; /* Azul de acento para botones CTA */
+  --primary-btn-hover: #1D4ED8;
   --dark: #0F172A;
   --light-bg: #F8FAFC;
   --text-main: #334155;
@@ -29,9 +30,9 @@ body {
   padding: 0 20px;
 }
 
-/* Navegación */
+/* Navegación y Logo */
 .navbar {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
@@ -43,24 +44,25 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
+  height: 80px;
 }
 
-.logo {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--dark);
+.logo-link {
+  display: flex;
+  align-items: center;
   text-decoration: none;
 }
 
-.logo span {
-  color: var(--primary);
+.brand-logo {
+  height: 48px; /* Ajusta la altura de la imagen del logo según prefieras */
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 24px;
   align-items: center;
 }
 
@@ -69,30 +71,41 @@ body {
   color: var(--text-main);
   font-weight: 600;
   font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary-btn);
 }
 
 .btn-nav {
-  background: var(--primary);
+  background: var(--primary-btn);
   color: var(--white) !important;
-  padding: 8px 16px;
+  padding: 10px 18px;
   border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.btn-nav:hover {
+  background: var(--primary-btn-hover) !important;
 }
 
 /* Hero Section */
 .hero {
   padding: 100px 0 80px;
   text-align: center;
-  background: radial-gradient(circle at top, #EEF2FF 0%, #FFFFFF 100%);
+  background: radial-gradient(circle at top, #F1F5F9 0%, #FFFFFF 100%);
 }
 
 .badge {
-  background: #E0E7FF;
-  color: var(--primary);
+  background: #E2E8F0;
+  color: var(--dark);
   font-size: 0.85rem;
   font-weight: 700;
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: 20px;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .hero h1 {
@@ -117,7 +130,7 @@ body {
 }
 
 .btn-primary {
-  background: var(--primary);
+  background: var(--primary-btn);
   color: var(--white);
   padding: 14px 28px;
   border-radius: 8px;
@@ -125,10 +138,11 @@ body {
   font-weight: 600;
   border: none;
   cursor: pointer;
+  transition: background 0.2s ease;
 }
 
 .btn-primary:hover {
-  background: var(--primary-hover);
+  background: var(--primary-btn-hover);
 }
 
 .btn-secondary {
@@ -139,6 +153,11 @@ body {
   text-decoration: none;
   font-weight: 600;
   border: 1px solid #CBD5E1;
+  transition: background 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #F1F5F9;
 }
 
 /* Servicios */
@@ -165,6 +184,7 @@ body {
   padding: 35px;
   border-radius: 12px;
   border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 .card .icon {
